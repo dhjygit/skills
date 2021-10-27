@@ -15,6 +15,18 @@ ssh-keygen -t rsa -C liu2211402141@qq.com
 
 `id_rsa`是私钥，`id_rsa.pub`是公钥
 
+在github中生成ssh keys时，将公钥复制进去
+
+```shell
+ssh -T git@github.com # 验证是否成功
+```
+
+```shell
+git remove -v # 查看本地仓库与远程仓库的关联详情
+git remote rm origin # 解除与现有远程仓库的关联
+git remote add origin git@github.com:dhjygit/skills.git
+```
+
 ### token登录
 
 1. 单击您的个人资料照片，然后单击 **Settings（设置）**。
@@ -42,6 +54,8 @@ git push --set-upstream origin master
 
 ```shell
 git clone origin https://github.com/dhjygit/skills.git
+git add .
+git commit -m "add"
 git push
 ```
 
